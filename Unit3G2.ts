@@ -14,41 +14,29 @@ const QUARTER: number = 25;
 const DIME: number = 10;
 const NICKEL: number = 5;
 
-// variables
-let totalCentsAsString1: string;
-let totalCents1: number;
-let toonies: number;
-let loonies: number;
-let quarters: number;
-let dimes: number;
-let nickels: number;
-let cents1: number;
-
 // input
-totalCentsAsString1 = prompt("Enter the amount of change (in cents):") || "0";
-totalCents1 = Math.abs(parseInt(totalCentsAsString1));
+const totalCentsAsString1: string = prompt("Enter the amount of change (in cents):") || "0";
+const totalCents1: number = Math.abs(parseInt(totalCentsAsString1));
 
 // process
-toonies = Math.floor(totalCents1 / TOONIE);
-totalCents1 = totalCents1 % TOONIE;
+const toonies: number = Math.floor(totalCents1 / TOONIE);
+const remainingAfterToonies: number = totalCents1 % TOONIE;
 
-loonies = Math.floor(totalCents1 / LOONIE);
-totalCents1 = totalCents1 % LOONIE;
+const loonies: number = Math.floor(remainingAfterToonies / LOONIE);
+const remainingAfterLoonies: number = remainingAfterToonies % LOONIE;
 
-quarters = Math.floor(totalCents1 / QUARTER);
-totalCents1 = totalCents1 % QUARTER;
+const quarters: number = Math.floor(remainingAfterLoonies / QUARTER);
+const remainingAfterQuarters: number = remainingAfterLoonies % QUARTER;
 
-dimes = Math.floor(totalCents1 / DIME);
-totalCents1 = totalCents1 % DIME;
+const dimes: number = Math.floor(remainingAfterQuarters / DIME);
+const remainingAfterDimes: number = remainingAfterQuarters % DIME;
 
-nickels = Math.floor(totalCents1 / NICKEL);
-totalCents1 = totalCents1 % NICKEL;
-
-cents1 = totalCents1;
+const nickels: number = Math.floor(remainingAfterDimes / NICKEL);
+const cents1: number = remainingAfterDimes % NICKEL;
 
 // output
 console.log(
   `Your change is: ${toonies} toonies, ${loonies} dollar, ${quarters} quarters, ${dimes} dime, ${nickels} nickels and ${cents1} cents.`
 );
 
-console.log("Done.");
+console.log("\nDone.");

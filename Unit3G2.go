@@ -1,11 +1,9 @@
-/**
- * @author William Provost
- * @version 1.0.0
- * @date 2025-11-11
- * @fileoverview This program asks the user for an amount of change in cents
- * and then calculates how many toonies, dollars, quarters, dimes,
- * nickels, and cents make up that amount.
- */
+// Author: William Provost
+// Version: 1.0.0
+// Date: 2025-11-11
+// Fileoverview: This program asks the user for an amount of change in cents
+// and then calculates how many toonies, dollars, quarters, dimes,
+// nickels, and cents make up that amount.
 
 package main
 
@@ -54,6 +52,6 @@ func main() {
 	// output
 	fmt.Printf("Your change is: %d toonies, %d dollar, %d quarters, %d dime, %d nickels and %d cents.\n",
 		toonies, loonies, quarters, dimes, nickels, cents)
-		
-	fmt.Println("Done.")
+
+	fmt.Println("\nDone.")
 }
